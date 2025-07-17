@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Order Resources - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">🛒 Order Resources</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Recommended Resources</h5>
+                <p class="card-text">
+                    Based on your AI consultation, here are the recommended resources for your farming needs.
+                </p>
+                
+                {% if resources %}
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Resource</th>
+                                <th>Quantity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for resource, quantity in resources.items %}
+                            <tr>
+                                <td>{{ resource }}</td>
+                                <td>{{ quantity }}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success">Add to Cart</button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-primary">Place Order</button>
+                    <a href="{% url 'chat_with_ai' %}" class="btn btn-secondary">Get New Recommendations</a>
+                </div>
+                {% else %}
+                <div class="alert alert-info">
+                    <p>No resources available. Please get AI recommendations first.</p>
+                    <a href="{% url 'chat_with_ai' %}" class="btn btn-primary">Get AI Recommendations</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Analysis - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">📊 Farm Analysis</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Data Analysis Dashboard</h5>
+                <p class="card-text">
+                    Analyze your farming data to make informed decisions and improve productivity.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body text-center">
+                                <h3>0</h3>
+                                <p>Total Crops</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-success text-white">
+                            <div class="card-body text-center">
+                                <h3>0</h3>
+                                <p>Active Fields</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body text-center">
+                                <h3>0</h3>
+                                <p>Pending Tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h6>Analysis Features:</h6>
+                    <ul>
+                        <li>Crop yield predictions</li>
+                        <li>Weather impact analysis</li>
+                        <li>Resource utilization reports</li>
+                        <li>Profit margin calculations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

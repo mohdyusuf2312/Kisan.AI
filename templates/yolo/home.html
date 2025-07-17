@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}YOLO Detection - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">🔍 YOLO Object Detection</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">AI-Powered Crop Detection</h5>
+                <p class="card-text">
+                    Use advanced computer vision to detect and analyze crops, pests, and diseases.
+                </p>
+                
+                <div class="alert alert-info">
+                    <strong>Feature Coming Soon!</strong> Upload images of your crops for AI-powered analysis.
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Detection Capabilities:</h6>
+                        <ul>
+                            <li>Crop identification</li>
+                            <li>Disease detection</li>
+                            <li>Pest identification</li>
+                            <li>Growth stage analysis</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6>Upload Image</h6>
+                                <input type="file" class="form-control" accept="image/*" disabled>
+                                <button class="btn btn-primary mt-2" disabled>Analyze Image</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

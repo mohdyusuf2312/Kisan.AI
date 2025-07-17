@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Crops - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">🌾 Crop Management</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Crop Information</h5>
+                <p class="card-text">
+                    Manage your crops, track their growth, and get recommendations for optimal farming.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Popular Crops:</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">🌽 Corn (मक्का)</li>
+                            <li class="list-group-item">🌾 Wheat (गेहूं)</li>
+                            <li class="list-group-item">🌾 Rice (चावल)</li>
+                            <li class="list-group-item">🌱 Sorghum (ज्वार)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Quick Actions:</h6>
+                        <a href="{% url 'fertilizer' %}" class="btn btn-outline-success me-2">Fertilizers</a>
+                        <a href="{% url 'seed' %}" class="btn btn-outline-primary me-2">Seeds</a>
+                        <a href="{% url 'profit' %}" class="btn btn-outline-warning">Profit Analysis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

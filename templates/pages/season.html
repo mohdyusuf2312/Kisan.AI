@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Season Information - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">🌱 Season Information</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Welcome to Kissan.AI</h5>
+                <p class="card-text">
+                    Your smart farming assistant to help you make informed decisions about crops, 
+                    fertilizers, and farming resources based on seasons and soil conditions.
+                </p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">🌾 Crops</h5>
+                                <p class="card-text">Manage your crop inventory and get recommendations</p>
+                                <a href="{% url 'crops' %}" class="btn btn-success">View Crops</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">🤖 AI Assistant</h5>
+                                <p class="card-text">Get AI-powered farming recommendations</p>
+                                <a href="{% url 'chat_with_ai' %}" class="btn btn-primary">Chat with AI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">📊 Analysis</h5>
+                                <p class="card-text">Analyze your farming data and trends</p>
+                                <a href="{% url 'analysis_home' %}" class="btn btn-info">View Analysis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

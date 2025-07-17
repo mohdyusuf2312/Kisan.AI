@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Resource Utilization - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">📊 Resource Utilization</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Farm Resource Management</h5>
+                <p class="card-text">
+                    Track and optimize the utilization of your farming resources.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Resource Categories:</h6>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" style="width: 75%">Land Utilization 75%</div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-info" style="width: 60%">Water Usage 60%</div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-warning" style="width: 85%">Equipment Usage 85%</div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-danger" style="width: 45%">Labor Efficiency 45%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Optimization Tips:</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Implement crop rotation</li>
+                            <li class="list-group-item">Use drip irrigation</li>
+                            <li class="list-group-item">Schedule equipment maintenance</li>
+                            <li class="list-group-item">Train workers for efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

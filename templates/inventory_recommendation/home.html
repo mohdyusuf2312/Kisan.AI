@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Inventory Recommendations - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">📦 Inventory Recommendations</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Smart Inventory Management</h5>
+                <p class="card-text">
+                    Get intelligent recommendations for managing your farming inventory and supplies.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Inventory Categories:</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Seeds & Planting Materials</li>
+                            <li class="list-group-item">Fertilizers & Nutrients</li>
+                            <li class="list-group-item">Pesticides & Herbicides</li>
+                            <li class="list-group-item">Tools & Equipment</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="alert alert-warning">
+                            <h6>Low Stock Alerts:</h6>
+                            <p>No items currently running low.</p>
+                        </div>
+                        
+                        <div class="alert alert-success">
+                            <h6>Recommendations:</h6>
+                            <p>Consider stocking up on seasonal fertilizers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

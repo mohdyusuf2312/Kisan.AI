@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}AI Assistant - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">🤖 AI Farming Assistant</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Get AI-Powered Farming Recommendations</h5>
+                <p class="card-text">
+                    Enter your crop details to get personalized recommendations for resources and tools.
+                </p>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="cropType" class="form-label">Crop Type</label>
+                                <select class="form-select" id="cropType" name="cropType" required>
+                                    <option value="">Select Crop Type</option>
+                                    <option value="rice" {% if cropType == 'rice' %}selected{% endif %}>Rice (चावल)</option>
+                                    <option value="wheat" {% if cropType == 'wheat' %}selected{% endif %}>Wheat (गेहूं)</option>
+                                    <option value="corn" {% if cropType == 'corn' %}selected{% endif %}>Corn (मक्का)</option>
+                                    <option value="sorghum" {% if cropType == 'sorghum' %}selected{% endif %}>Sorghum (ज्वार)</option>
+                                    <option value="sugarcane" {% if cropType == 'sugarcane' %}selected{% endif %}>Sugarcane (गन्ना)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="landArea" class="form-label">Land Area (sq. meters)</label>
+                                <input type="number" class="form-control" id="landArea" name="landArea" 
+                                       value="{{ landArea }}" placeholder="Enter land area" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="season" class="form-label">Season</label>
+                                <select class="form-select" id="season" name="season" required>
+                                    <option value="">Select Season</option>
+                                    <option value="summer" {% if season == 'summer' %}selected{% endif %}>Summer</option>
+                                    <option value="winter" {% if season == 'winter' %}selected{% endif %}>Winter</option>
+                                    <option value="monsoon" {% if season == 'monsoon' %}selected{% endif %}>Monsoon</option>
+                                    <option value="spring" {% if season == 'spring' %}selected{% endif %}>Spring</option>
+                                    <option value="autumn" {% if season == 'autumn' %}selected{% endif %}>Autumn</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="soilquality" class="form-label">Soil Quality</label>
+                                <select class="form-select" id="soilquality" name="soilquality" required>
+                                    <option value="">Select Soil Quality</option>
+                                    <option value="excellent" {% if soilquality == 'excellent' %}selected{% endif %}>Excellent</option>
+                                    <option value="good" {% if soilquality == 'good' %}selected{% endif %}>Good</option>
+                                    <option value="average" {% if soilquality == 'average' %}selected{% endif %}>Average</option>
+                                    <option value="poor" {% if soilquality == 'poor' %}selected{% endif %}>Poor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Get AI Recommendations</button>
+                </form>
+                
+                {% if response %}
+                <div class="mt-4">
+                    <h5>AI Recommendations:</h5>
+                    <div class="alert alert-success">
+                        <pre>{{ response }}</pre>
+                    </div>
+                    <a href="{% url 'order' %}" class="btn btn-success">Order Resources</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Data Tables - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">📋 Farm Data Tables</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Comprehensive Farm Data</h5>
+                <p class="card-text">
+                    View detailed tables of your farming data and records.
+                </p>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Crop Name</th>
+                                <th>Area (Acres)</th>
+                                <th>Planting Date</th>
+                                <th>Expected Harvest</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🌽 Corn</td>
+                                <td>5.2</td>
+                                <td>2024-03-15</td>
+                                <td>2024-07-20</td>
+                                <td><span class="badge bg-success">Growing</span></td>
+                            </tr>
+                            <tr>
+                                <td>🌾 Wheat</td>
+                                <td>3.8</td>
+                                <td>2024-02-10</td>
+                                <td>2024-06-15</td>
+                                <td><span class="badge bg-warning">Harvesting</span></td>
+                            </tr>
+                            <tr>
+                                <td>🌾 Rice</td>
+                                <td>4.5</td>
+                                <td>2024-04-01</td>
+                                <td>2024-08-30</td>
+                                <td><span class="badge bg-info">Planted</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

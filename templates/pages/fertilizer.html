@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Fertilizers - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">🧪 Fertilizer Information</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Fertilizer Recommendations</h5>
+                <p class="card-text">
+                    Get the right fertilizer recommendations based on your crop type and soil conditions.
+                </p>
+                
+                <div class="alert alert-info">
+                    <strong>Note:</strong> Always test your soil before applying fertilizers for best results.
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Organic Fertilizers</h6>
+                                <p class="card-text">Natural and eco-friendly options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Chemical Fertilizers</h6>
+                                <p class="card-text">Quick-acting nutrient solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Bio-fertilizers</h6>
+                                <p class="card-text">Microbial nutrient enhancers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

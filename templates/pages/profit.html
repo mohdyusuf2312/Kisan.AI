@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Profit Analysis - Kissan.AI{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">💰 Profit Analysis</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Farm Profitability Analysis</h5>
+                <p class="card-text">
+                    Analyze your farming costs and profits to make better financial decisions.
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="text-success">₹0</h3>
+                                <p>Total Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="text-danger">₹0</h3>
+                                <p>Total Costs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="text-primary">₹0</h3>
+                                <p>Net Profit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h6>Cost Breakdown:</h6>
+                    <ul>
+                        <li>Seeds and Planting Materials</li>
+                        <li>Fertilizers and Pesticides</li>
+                        <li>Labor Costs</li>
+                        <li>Equipment and Machinery</li>
+                        <li>Transportation and Marketing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
