@@ -13,7 +13,7 @@ def send_report_via_sms():
 
     message = client.messages.create(
     from_='whatsapp:+14155238886',
-            body = f'''नमस्ते, आर्यन
+            body = f'''नमस्ते, शुजा उर रहमान
                     उत्पाद का नाम: मक्का
                     समाप्ति तिथि: कल, 26-02-2024
 
